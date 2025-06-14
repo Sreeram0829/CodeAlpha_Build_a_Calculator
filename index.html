@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ultimate Calculator</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="calculator">
+        <div class="display">
+            <div class="history" id="history"></div>
+            <div class="result" id="result">0</div>
+        </div>
+        <div class="buttons">
+            <button class="btn clear" onclick="clearDisplay()">C<span class="key-hint">Esc</span></button>
+            <button class="btn backspace" onclick="backspace()"><i class="fas fa-backspace"></i><span class="key-hint">⌫</span></button>
+            <button class="btn scientific" onclick="calculateFunction('Math.sqrt')">√<span class="key-hint">√</span></button>
+            <button class="btn percent" onclick="appendOperation('%')">%<span class="key-hint">%</span></button>
+            <button class="btn operator" onclick="appendOperation('/')">/<span class="key-hint">/</span></button>
+            
+            <button class="btn scientific" onclick="appendOperation('Math.PI')">π<span class="key-hint">π</span></button>
+            <button class="btn" onclick="appendNumber('7')">7<span class="key-hint">7</span></button>
+            <button class="btn" onclick="appendNumber('8')">8<span class="key-hint">8</span></button>
+            <button class="btn" onclick="appendNumber('9')">9<span class="key-hint">9</span></button>
+            <button class="btn operator" onclick="appendOperation('*')">×<span class="key-hint">*</span></button>
+            
+            <button class="btn scientific" onclick="appendOperation('Math.E')">e<span class="key-hint">e</span></button>
+            <button class="btn" onclick="appendNumber('4')">4<span class="key-hint">4</span></button>
+            <button class="btn" onclick="appendNumber('5')">5<span class="key-hint">5</span></button>
+            <button class="btn" onclick="appendNumber('6')">6<span class="key-hint">6</span></button>
+            <button class="btn operator" onclick="appendOperation('-')">−<span class="key-hint">-</span></button>
+            
+            <button class="btn scientific" onclick="calculateFunction('Math.sin')">sin<span class="key-hint">s</span></button>
+            <button class="btn" onclick="appendNumber('1')">1<span class="key-hint">1</span></button>
+            <button class="btn" onclick="appendNumber('2')">2<span class="key-hint">2</span></button>
+            <button class="btn" onclick="appendNumber('3')">3<span class="key-hint">3</span></button>
+            <button class="btn operator" onclick="appendOperation('+')">+<span class="key-hint">+</span></button>
+            
+            <button class="btn scientific" onclick="calculateFunction('Math.cos')">cos<span class="key-hint">c</span></button>
+            <button class="btn scientific" onclick="toggleSign()">±<span class="key-hint">±</span></button>
+            <button class="btn" onclick="appendNumber('0')">0<span class="key-hint">0</span></button>
+            <button class="btn" onclick="appendNumber('.')">.<span class="key-hint">.</span></button>
+            <button class="btn equals" onclick="calculate()">=<span class="key-hint">=</span></button>
+            
+            <button class="btn scientific" onclick="calculateFunction('Math.tan')">tan<span class="key-hint">t</span></button>
+            <button class="btn scientific" onclick="calculateFunction('Math.log')">ln<span class="key-hint">l</span></button>
+            <button class="btn scientific" onclick="calculateFunction('Math.log10')">log<span class="key-hint">L</span></button>
+            <button class="btn scientific" onclick="calculatePower()">x^y<span class="key-hint">^</span></button>
+            <button class="btn scientific" onclick="calculateFactorial()">x!<span class="key-hint">!</span></button>
+            
+            <button class="btn scientific" onclick="appendOperation('(')">(<span class="key-hint">(</span></button>
+            <button class="btn scientific" onclick="appendOperation(')')">)<span class="key-hint">)</span></button>
+            <button class="btn scientific" onclick="calculateFunction('Math.abs')">|x|<span class="key-hint">|</span></button>
+            <button class="btn scientific" onclick="calculateReciprocal()">1/x<span class="key-hint">1/</span></button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
