@@ -90,6 +90,4 @@ Feel free to use, modify, and share!
 🧑‍💻 Internship Details
 Developed by: Chapala Sriram
 For: CodeAlpha Internship
-Submission Date: 15/06/2025
-
-
+Submission Date: 09/07/2025
